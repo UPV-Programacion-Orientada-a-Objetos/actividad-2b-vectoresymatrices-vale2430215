@@ -32,9 +32,9 @@ int capacidadPila = 10;
 
 // Inicialización del sistema
 void inicializarSistema() {
-    cout << "Fila inicial: ";
+    cout << "Num de filas: ";
     cin >> filas;
-    cout << "Columna inicial: ";
+    cout << "Num de columnas: ";
     cin >> columnas;
 
     // Crear matriz dinámica 2D
@@ -58,23 +58,23 @@ void inicializarSistema() {
     pilaResultado = new int[capacidadPila];
 
     cout << "\n--- ALPHATEC---\n";
-    cout << "Inicializacion exitosa. Almacén " << filas << "x" << columnas 
+    cout << "Inicializacion exitosa. Almacen " << filas << "x" << columnas 
          << " creado. Capacidad Maestro: " << capacidadMaestro << ".\n\n";
 }
 
 // Colocar lote en el almacén
 void colocarLote() {
     int f, c;
-    cout << "Posición (F C): ";
+    cout << "Posicion (F C): ";
     cin >> f >> c;
 
     if (f < 0 || f >= filas || c < 0 || c >= columnas) {
-        cout << "PosiciOn inválida.\n\n";
+        cout << "Posicion invalida.\n\n";
         return;
     }
 
     if (almacen[f][c].idLote != 0) {
-        cout << "Esa celda ya esta ocupada.\n\n";
+        cout << "Esa celda ya esta ocupada\n\n";
         return;
     }
 
@@ -88,7 +88,7 @@ void colocarLote() {
     }
 
     if (indiceLibre == -1) {
-        cout << "Capacidad llena en maestro de lotes.\n\n";
+        cout << "Capacidad llena en maestro de lotes\n\n";
         return;
     }
 
@@ -205,7 +205,7 @@ void liberarMemoria() {
     delete[] pilaIDLote;
     delete[] pilaResultado;
 
-    cout << "La memoria de liberó. Sistema terminado\n";
+    cout << "La memoria de libero. Sistema terminado\n";
 }
 
 // --- FUNCIÓN PRINCIPAL ---
